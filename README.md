@@ -1,6 +1,6 @@
 # Notes
 
-Preserve notes that I write each day in a standardised format.
+Keeps my notes in version control so that what I write each day is in a standardised format.
 
 ### Prerequisites
 
