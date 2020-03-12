@@ -20,10 +20,12 @@ function today -d "Open today's notes"
   if not test -e $note_file
     mkdir -p $notes_directory
     cp $template_file $note_file
-    sed -i "s/TodaysDate/$todays_date/" $note_file
+    sed -i '' "s/TodaysDate/$todays_date/" $note_file
   end
 
+  pushd $notes_directory
   vim $note_file
+  popd $notes_directory
 end
 
 function standup -d "Open today's standup notes"
@@ -35,9 +37,11 @@ function standup -d "Open today's standup notes"
   if not test -e $note_file
     mkdir -p $notes_directory
     cp $template_file $note_file
-    sed -i "s/TodaysDate/$todays_date/" $note_file
+    sed -i '' "s/TodaysDate/$todays_date/" $note_file
   end
 
+  pushd $notes_directory
   vim $note_file
+  popd $notes_directory
 end
 ```
